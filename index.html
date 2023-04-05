@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="shortcut icon" href="./img/html-academy.svg" type="image/x-icon">
 </head>
 
 <body class="page__body">
@@ -89,7 +88,9 @@
     </a>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--current">
@@ -206,14 +207,20 @@
           изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
         </p>
 
-        <span class="">
-          <b>5</b>кг
-          <p>снижение веса</p>
-        </span>
-        <span class="">
-          <b>60</b>дней
-          <p>затрачено времени</p>
-        </span>
+        <fieldset>
+          <legend>
+            снижение веса
+          </legend>
+          
+          <b>5</b> кг
+        </fieldset>
+        <fieldset>
+          <legend>
+            затрачено времени
+          </legend>
+
+          <b>60</b> дней
+        </fieldset>
 
         <p>Затраты на питание: 15 000 руб.</p>
         <img class="example__picture" src="./img/before-mobile.png" width="311" height="232"
@@ -274,8 +281,9 @@
       </ul>
 
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <img src="./img/html-academy-grey.svg" width="27" height="34" alt="">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+          <img src="./img/html-academy-grey.svg" width="27" height="34" alt="">
+        </a>
       </div>
     </div>
   </footer>
