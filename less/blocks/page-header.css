@@ -1,13 +1,6 @@
-.flex-centered() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .page-header {
   display: flex;
 }
-
 .main-nav {
   display: flex;
   flex-direction: column;

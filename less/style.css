@@ -1,0 +1,12 @@
+/* Global */
+@import 'global/global.css';
+@import 'global/normalize.css';
+@import 'global/variables.css';
+/* Blocks */
+.page-header {
+  display: flex;
+}
+.main-nav {
+  display: flex;
+  flex-direction: column;
+}
