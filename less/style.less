@@ -1,8 +1,9 @@
 /* Global */
 
-@import 'global/global.css';
-@import 'global/normalize.css';
-@import 'global/variables.css';
+@import 'global/global.less';
+@import 'global/normalize.less';
+@import 'global/variables.less';
+@import 'global/fonts.less';
 
 /* Blocks */
 
@@ -14,3 +15,221 @@
 @import "blocks/example.less";
 @import "blocks/map.less";
 @import "blocks/page-footer.less";
+
+// Colors
+
+@basic-green: #68B738;
+@basic-green-2: #5EAA2F;
+@basic-grey: #f2f2f2;
+@special-grey: #EBEBEB;
+@special-grey-2: #CDCDCD;
+@special-grey-3: #666666;
+@special-dark-grey: #444444;
+@special--dark-grey-2: #222222;
+@status-error: #FF8282;
+
+// Viewports
+
+@tablet-width: 768px;
+@desktop-width: 1200px;
+@mobile-width-only: 767px;
+
+.page__body {
+  width: 100%;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+// page-header
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+
+    .site-list__item {
+      border: none;
+    }
+
+    .site-list__item--current {
+      border-bottom: 2px solid @basic-green;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    color: #fff;
+
+    .site-list__item--current {
+      border-bottom: 2px solid #fff;
+    }
+  }
+}
+
+.page-header__title {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 20px;
+  font-size: 600;
+}
+
+.page-header__logo {
+  display: flex;
+}
+
+.page-header__logo-image {
+  width: 33px;
+  height: 37px;
+
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 50px;
+  }
+}
+
+.page-header-top-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 21px 0 21px;
+  padding: 12px 0 22px 0;
+}
+
+
+@media (min-width: @tablet-width) {
+  .site-list__item {
+    border: none;
+    flex-direction: row;
+  }
+
+  .site-list__item--current {
+    border-bottom: 2px solid @basic-green;
+  }
+}
+
+.page-header__toggle {
+  border: none;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__toggle::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  clip-path: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 49% 40%);
+}
+
+// main-nav
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    margin-right: 29px;
+
+    .site-list__item:not(:last-child) {
+      margin-right: 34px;
+    }
+  }
+}
+
+.site-list__item {
+  padding: 22px 0 22px 0;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.site-list__item:first-child {
+  border-top: 2px solid #e6e6e6;
+}
+
+.site-list__item a {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.site-list__item:not(:last-child) {
+  margin-right: 0px;
+}
+
+// page-main
+
+.page-main {
+  text-align: center;
+}
+
+.food {
+  width: 100%;
+  color: #fff;
+  position: relative;
+  margin-bottom: 150px;
+
+  &__wrapper {
+    height: Hug;
+    padding-top: 27px;
+    background: rgba(104, 183, 56, 0.85);
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 29px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    margin: 0 auto;
+  }
+
+  &__link {
+    text-decoration: none;
+    background-color: @basic-green;
+    text-transform: uppercase;
+    line-height: 18px;
+    font-size: 14px;
+    padding: 7px 0 7px 0;
+    display: block;
+    width: auto;
+  }
+
+  .cat-bg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+}
+// advantages
