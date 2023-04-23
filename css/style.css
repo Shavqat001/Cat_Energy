@@ -320,146 +320,134 @@ template {
 }
 .food {
   width: 100%;
-  color: #fff;
+  height: 302px;
+  background-color: #68B738;
+  background-image: url('../../img/cat-mobile.png');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
-}
-.food__wrapper {
-  margin: 0 auto;
-}
-.food__wrapper .green-side {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.food__wrapper .green-side .cat-layer {
-  margin: auto;
-  width: 100%;
-  height: 65%;
-}
-@media (min-width: 1200px) {
-  .food__wrapper .green-side .cat-layer {
-    width: 100%;
-    height: 694px;
-  }
+  color: #fff;
+  margin-bottom: 190px;
 }
 @media (min-width: 768px) {
-  .food__wrapper .green-side {
-    display: none;
+  .food {
+    background: none;
   }
 }
-@media (min-width: 1200px) {
-  .food__wrapper .green-side {
-    display: block;
-    position: absolute;
-    top: -100px;
-    right: 0;
-    width: 50%;
-    z-index: -1;
-  }
-}
-.food__wrapper .green-side::after {
-  content: '';
-  width: 100%;
-  height: 65%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  background-color: rgba(104, 183, 56, 0.85);
-}
-@media (min-width: 1200px) {
-  .food__wrapper .green-side::after {
-    height: 694px;
-  }
-}
-.food__wrapper .front-side {
-  position: relative;
-  z-index: 1;
-  padding: 27px 30px 0 30px;
+.food__wrapper {
+  width: 280px;
   margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  padding-top: 27px;
 }
 .food__title {
   font-size: 36px;
-  line-height: 36px;
   font-weight: 400;
   margin: 0;
   margin-bottom: 25px;
-}
-@media (min-width: 768px) {
-  .food__title {
-    font-size: 60px;
-    line-height: 60px;
-    padding-left: 117px;
-    color: #000;
-    text-align: left;
-  }
-}
-@media (min-width: 1200px) {
-  .food__title {
-    padding-left: 190px;
-  }
+  line-height: 36px;
 }
 .food__description {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   font-size: 14px;
-  font-weight: 400;
   line-height: 14px;
   text-transform: uppercase;
 }
-@media (min-width: 768px) {
-  .food__description {
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 400;
-    padding-left: 117px;
-    color: #000;
-    text-align: left;
-  }
+.food__link {
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #68B738;
+  padding: 7px 0 7px 0;
+  text-decoration: none;
 }
-@media (min-width: 1200px) {
-  .food__description {
-    padding-left: 190px;
-  }
-}
-.food__image {
-  margin: 0 auto;
+.food::after {
+  content: '';
   width: 100%;
   height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(104, 183, 56, 0.85);
+  z-index: 1;
 }
 @media (min-width: 768px) {
-  .food__image {
-    width: 709px;
-    height: 609px;
+  .food::after {
+    display: none;
   }
 }
-@media (min-width: 1200px) {
-  .food__image {
-    width: 552px;
-    height: 499px;
-  }
+.advantages {
+  width: 100%;
 }
-.food__link {
-  text-decoration: none;
-  background-color: #68B738;
+.advantages__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+.advantages__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+.advantages__item {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.advantages__item:not(:last-child) {
+  margin-bottom: 27px;
+}
+.advantages__title {
+  order: 1;
+  margin: 0;
+  margin-top: 18px;
   text-transform: uppercase;
-  line-height: 18px;
+  vertical-align: middle;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.advantages__description {
+  order: 2;
+  margin: 0;
+  color: #444444;
   font-size: 14px;
-  padding: 7px 0 7px 0;
-  display: block;
-  max-width: 280px;
-  margin: auto;
+  font-weight: 400;
+  line-height: 18px;
+  position: relative;
+  margin-bottom: 23px;
 }
-@media (min-width: 768px) {
-  .food__link {
-    font-size: 20px;
-    line-height: 20px;
-  }
+.advantages__logo {
+  order: 0;
+  margin-right: 19px;
+  margin-bottom: 22px;
 }
-@media (min-width: 1200px) {
-  .food__link {
-    line-height: 20px;
-    font-size: 20px;
-  }
+.advantages hr {
+  width: 100%;
+  order: 3;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.advantages__link {
+  text-transform: uppercase;
+  order: 4;
+  position: relative;
+}
+.advantages__link::after {
+  content: '';
+  width: 24px;
+  height: 12px;
+  position: absolute;
+  left: 100px;
+  top: 3px;
+  background-image: url('../../img/arrow.svg');
+  background-size: 100%;
 }
 @font-face {
   font-family: 'Oswald';
