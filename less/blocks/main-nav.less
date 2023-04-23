@@ -27,12 +27,13 @@
 
 .site-list__item {
   border-bottom: 2px solid #e6e6e6;
-  line-height: 24px;
   position: relative;
+  padding: 22px 0 22px 0;
 
   @media (min-width: @tablet-width) {
     border: none;
     flex-direction: row;
+    padding: 0;
   }
 }
 
@@ -64,11 +65,16 @@
   text-decoration: none;
   font-size: 20px;
   line-height: 20px;
-  font-weight: 600;
+  font-weight: 500;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 24px;
+    font-weight: 400;
+
+    @media (min-width: @tablet-width) {
+      line-height: 30px;
+    }
   }
 }
 

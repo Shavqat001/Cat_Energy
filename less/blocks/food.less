@@ -11,17 +11,19 @@
 
   @media (min-width: @tablet-width) {
     background: none;
+    margin-bottom: 500px;
   }
 
   @media (min-width: @desktop-width) {
     background-image: url('../../img/cat.png');
     background-position: 100% 0;
     background-repeat: no-repeat;
-    background-size: 720px;
+    background-size: 50%;
     height: 696px;
     top: -100px;
     z-index: -1;
     color: #000;
+    margin-bottom: 0px;
     text-align: left;
   }
 
@@ -34,10 +36,13 @@
 
     @media (min-width: @tablet-width) {
       width: 708px;
+      padding-left: 117px;
     }
 
     @media (min-width: @desktop-width) {
       width: 1220px;
+      padding-top: 223px;
+      padding-left: 90px;
     }
   }
 
@@ -47,6 +52,19 @@
     margin: 0;
     margin-bottom: 25px;
     line-height: 36px;
+
+    @media (min-width: @tablet-width) {
+      color: #000;
+      font-size: 60px;
+      line-height: 60px;
+      text-align: left;
+      margin-bottom: 41px;
+    }
+
+    @media (min-width: @desktop-width) {
+      color: #000;
+      margin-bottom: 40px;
+    }
   }
 
   &__description {
@@ -55,10 +73,39 @@
     font-size: 14px;
     line-height: 14px;
     text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      color: #000;
+      text-align: left;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      color: #000;
+      text-align: left;
+      margin-bottom: 52px;
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+
+    @media (min-width: @tablet-width) {
+      width: 708px;
+      height: 609px;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      right: 220px;
+      top: 141px;
+      height: 499px;
+      width: 552px;
+    }
   }
 
   &__link {
-    display: block;
     text-transform: uppercase;
     font-size: 14px;
     line-height: 18px;
@@ -68,6 +115,24 @@
     max-width: 280px;
     text-align: center;
     color: #fff;
+    display: block;
+
+    @media (min-width: @tablet-width) {
+      width: 244px;
+      font-size: 20px;
+      line-height: 20px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 250px;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: relative;
+      top: 0;
+    }
   }
 }
 
@@ -87,7 +152,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    width: 720px;
+    width: 50%;
     right: 0;
     left: auto;
   }
