@@ -39,11 +39,11 @@
 
     @media (min-width: @tablet-width) {
       display: grid;
-      grid-template-columns: 1fr 200px;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 250px;
+      grid-template-rows: 80px 144px 1fr;
       height: 372px;
       padding-left: 52px;
-      padding-right: 62px;
+      margin-bottom: 45px;
       padding-top: 70px;
     }
 
@@ -53,7 +53,8 @@
       }
 
       max-width: 570px;
-      margin-bottom: 80px;
+      margin-bottom: 72px;
+      display: flex;
     }
   }
 
@@ -89,6 +90,7 @@
       font-size: 16px;
       line-height: 24px;
       margin-bottom: 48px;
+      color: #000;
     }
   }
 
@@ -98,12 +100,25 @@
     margin-bottom: 22px;
 
     @media (min-width: @tablet-width) {
-      width: 100%;
-      height: 100%;
+      width: 200px;
+      height: 200px;
       grid-column-start: 2;
       grid-row-start: 1;
       grid-row-end: -2;
-      margin-right: 42px;
+      margin: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100px;
+      height: 100px;
+      margin-right: 62px;
+      margin-bottom: 39px;
+    }
+  }
+
+  &__logo:nth-child(2) {
+    @media (min-width: @tablet-width) {
+      min-width: 268px;
     }
   }
 
@@ -128,6 +143,11 @@
       grid-column-start: 1;
       grid-column-end: 2;
     }
+
+    @media (min-width: @desktop-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &__link::after {
@@ -139,5 +159,10 @@
     top: 3px;
     background-image: url('../../img/arrow.svg');
     background-size: 100%;
+
+    @media (min-width: @desktop-width) {
+      top: 10px;
+      left: 120px;
+    }
   }
 }
