@@ -5,9 +5,17 @@
   background-color: @color-grey;
   padding-top: 27px;
 
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(0deg, #fff 50%, @color-grey 50%);
+  }
+
   &__wrapper {
     margin: 0 auto;
     width: 280px;
+
+    @media (min-width: @tablet-width) {
+      width: 708px;
+    }
   }
 
   &__title {
@@ -71,6 +79,21 @@
     line-height: 20px;
     margin: 0;
     margin-bottom: 42px;
+  }
+
+  &__picture {
+    width: 311px;
+    height: 232px;
+    object-fit: contain;
+    background: url('../../img/after.png') 0%,
+      url('../../img/before.png') 100%;
+    background-size: 100%;
+    background-position: 50% 0;
+
+    @media (min-width:@tablet-width) {
+      width: 690px;
+      height: 517px;
+    }
   }
 
   &__filter {
