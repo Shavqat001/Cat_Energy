@@ -9,6 +9,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 28px 0 28px 0;
+
+    @media (min-width: @tablet-width) {
+      width: 625px;
+    }
   }
 
   &__description {
@@ -16,6 +20,10 @@
     line-height: 18px;
     text-transform: uppercase;
     margin: 0;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+    }
   }
 
   &__address {
@@ -24,9 +32,18 @@
     color: @special-dark-grey;
     font-style: normal;
     font-family: 'Arial';
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      text-align: right;
+    }
   }
 
   &__location {
     width: 100%;
+
+    @media (min-width: @tablet-width) {
+      height: 400px;
+    }
   }
 }
