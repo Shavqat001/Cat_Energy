@@ -4,17 +4,28 @@
   text-align: left;
   background-color: @color-grey;
   padding-top: 27px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     background: linear-gradient(0deg, @color-grey 50%, #fff 50%);
   }
 
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(0deg, #eaeaea 75%, #fff 25%);
+    height: 656px;
+  }
+
   &__wrapper {
     margin: 0 auto;
     width: 280px;
+    position: relative;
 
     @media (min-width: @tablet-width) {
       width: 708px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 1227px;
     }
   }
 
@@ -26,6 +37,11 @@
 
     @media (min-width: @tablet-width) {
       font-size: 60px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 146px;
+      margin-top: 69px;
     }
   }
 
@@ -39,6 +55,11 @@
     @media (min-width: @tablet-width) {
       font-size: 16px;
       line-height: 24px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 436px;
+      margin-bottom: 50px;
     }
   }
 
@@ -56,9 +77,7 @@
     width: 124px;
     height: 64px;
     border: 2px solid @special-grey-2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .flex-center();
     margin: 0;
     padding: 0;
     position: relative;
@@ -95,6 +114,10 @@
         top: 67px;
         background-color: #fff;
       }
+
+      @media (min-width: @desktop-width) {
+        background-color: @color-grey;
+      }
     }
 
     & legend br {
@@ -115,6 +138,7 @@
     line-height: 20px;
     margin: 0;
     margin-bottom: 42px;
+    display: flex;
 
     @media (min-width: @tablet-width) {
       display: inline;
@@ -126,6 +150,15 @@
       margin-top: 25px;
       margin-right: 30px;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 345px;
+      position: absolute;
+      right: auto;
+      left: 0;
+      margin-top: 130px;
+      text-align: left;
+    }
   }
 
   &__cost br {
@@ -134,21 +167,36 @@
     @media (min-width: @tablet-width) {
       display: inline;
     }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &__cost b {
+    font-weight: 400;
+
+    @media (min-width: @desktop-width) {
+      margin-right: 63px;
+    }
   }
 
   &__picture {
     width: 311px;
     height: 232px;
     object-fit: contain;
-    background: url('../../img/after.png') 0%,
-      url('../../img/before.png') 100%;
-    background-size: 100%;
-    background-position: 50% 0;
+    margin-bottom: 35px;
 
     @media (min-width:@tablet-width) {
       width: 690px;
       height: 517px;
       margin-top: 60px;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      right: 0;
+      top: -140px;
     }
   }
 
@@ -158,6 +206,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (min-width: @desktop-width) {
+      width: 579px;
+      margin-left: auto;
+      margin-right: 0;
+      margin-top: 50px;
+    }
 
     & b {
       font-size: 16px;
@@ -169,10 +224,8 @@
         line-height: 30px;
       }
     }
-  }
 
-  &__picture {
-    margin-bottom: 35px;
+
   }
 }
 
@@ -190,6 +243,10 @@ input[type=range] {
     border-radius: 6px;
     height: 6px;
     background-color: #dcdcdc;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 428px;
   }
 }
 
