@@ -1,22 +1,24 @@
 .map {
-  width: 320px;
   text-align: left;
+  height: 362px;
+
+  @media (min-width: @desktop-width) {
+    background-color: #fff;
+  }
 
   .map-top {
-    width: 280px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 28px 0 28px 0;
+    background-color: @basic-grey;
 
     @media (min-width: @tablet-width) {
-      width: 625px;
+      justify-content: space-between;
+      padding: 28px 71px;
     }
 
     @media (min-width: @desktop-width) {
-      width: 570px;
-      height: 201px;
       background-color: #fff;
       position: absolute;
       left: 110px;
@@ -26,6 +28,7 @@
       font-size: 20px;
       padding: 0;
       box-shadow: 0 0 10px -5px #444;
+      padding: 66px 76px;
     }
   }
 
@@ -34,6 +37,7 @@
     line-height: 18px;
     text-transform: uppercase;
     margin: 0;
+    margin-right: 17px;
 
     @media (min-width: @tablet-width) {
       font-size: 20px;

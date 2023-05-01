@@ -130,83 +130,91 @@
           программу питания для вашего кота
         </p>
 
-        <form class="program-selection__form-about-cat" action="">
+        <form class="program-selection__form" action="">
           <div>
             <label class="star-mark" for="">имя:</label>
-            <input type="text" value="Барсик"> <br>
+            <input class="form-field" type="text" value="Барсик"> <br>
           </div>
 
           <div>
             <label class="star-mark" for="">вес (кг):</label>
-            <input type="number" value="7"> <br>
+            <input class="form-field" type="number" value="7"> <br>
           </div>
 
           <div>
             <label for="">возраст (лет):</label>
-            <input type="number" value="7"> <br>
-          </div>
-        </form>
-
-        <fieldset class="program-selection__weight">
-          <legend class="visually-hidden">выбор веса</legend>
-
-          <div>
-            <input type="radio" id="weight-loss" name="###" value="thin" checked>
-            <label for="weight-loss">похудение</label>
+            <input class="form-field" type="number" value="7"> <br>
           </div>
 
-          <div>
-            <input type="radio" id="weight-gain" name="###" value="grow">
-            <label for="weight-gain">набор массы</label>
-          </div>
+          <fieldset class="program-selection__weight">
+            <legend class="visually-hidden">выбор веса</legend>
 
-          <div>
-            <input type="radio" id="do-not-know" name="###" value="know">
-            <label for="do-not-know">не знаю (нужен ваш совет)</label>
-          </div>
-        </fieldset>
+            <div>
+              <input type="radio" id="weight-loss" name="###" value="thin" checked>
+              <label for="weight-loss">похудение</label>
+            </div>
 
-        <fieldset class="program-selection__contact">
-          <legend>Контактные данные <br> (владельца кота)</legend>
+            <div>
+              <input type="radio" id="weight-gain" name="###" value="grow">
+              <label for="weight-gain">набор массы</label>
+            </div>
 
-          <form action="">
+            <div>
+              <input type="radio" id="do-not-know" name="###" value="know">
+              <label for="do-not-know">не знаю (нужен ваш совет)</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="program-selection__contact">
+            <legend>Контактные данные <br> (владельца кота)</legend>
+
             <div>
               <label class="star-mark" for="">e-mail:</label>
-              <input type="email" value="kuklachev@gmail.com">
+              <input class="form-field" type="email" value="kuklachev@gmail.com">
             </div>
 
             <div>
               <label class="star-mark" for="">телефон:</label>
-              <input type="tel" value="8 (960) 900-60-90">
+              <input class="form-field" type="tel" value="8 (960) 900-60-90">
             </div>
-          </form>
-        </fieldset>
+          </fieldset>
 
-        <fieldset class="program-selection__comment">
-          <legend>Комментарий</legend>
-          <textarea name="" id="" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
+          <fieldset class="program-selection__comment">
+            <legend>Комментарий</legend>
+            <div>
+              <textarea name="" id="" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+          </fieldset>
 
-        <fieldset class="program-selection__additionally">
-          <legend>Дополнительно</legend>
+          <fieldset class="program-selection__additionally">
+            <legend>Дополнительно</legend>
 
-          <form action="">
-            <input type="checkbox" checked>
-            <label for="">сахарозаменитель</label> <br>
+            <div>
+              <input id="sweetener" type="checkbox" name="сахарозаменитель" checked>
+              <label for="sweetener">сахарозаменитель</label>
+            </div>
 
-            <input type="checkbox">
-            <label for="">молоко</label> <br>
+            <div>
+              <input id="milk" name="молоко" type="checkbox">
+              <label for="milk">молоко</label>
+            </div>
 
-            <input type="checkbox">
-            <label for="">питьевая вода</label> <br>
+            <div>
+              <input id="water" name="питьевая вода" type="checkbox">
+              <label for="water">питьевая вода</label>
+            </div>
 
-            <input type="checkbox">
-            <label for="">витамины</label> <br>
+            <div>
+              <input id="vitamins" name="витамины" type="checkbox">
+              <label for="vitamins">витамины</label>
+            </div>
 
-            <button type="submit">отправить заявку</button>
-            <b>Обязательные поля</b>
-          </form>
-        </fieldset>
+          </fieldset>
+          <div class="send-block">
+            <button class="send-button" type="submit">отправить заявку</button>
+            <b class="required-fields">Обязательные поля</b>
+          </div>
+        </form>
       </div>
     </section>
 
