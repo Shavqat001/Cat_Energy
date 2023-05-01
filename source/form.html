@@ -102,7 +102,7 @@
     </div>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list black-text">
           <li class="site-list__item ">
             <a href="./index.html">Главная</a>
           </li>
@@ -122,7 +122,6 @@
 
     <section class="program-selection">
       <div class="program-selection__wrapper">
-
         <h2 class="program-selection__title">Подбор программы</h2>
 
         <p class="program-selection__description">
@@ -131,20 +130,22 @@
         </p>
 
         <form class="program-selection__form" action="">
-          <div>
-            <label class="star-mark" for="">имя:</label>
-            <input class="form-field" type="text" value="Барсик"> <br>
-          </div>
+          <fieldset class="program-selection__filling-form">
+            <div>
+              <label class="star-mark" for="">имя:</label>
+              <input class="form-field" type="text" value="Барсик"> <br>
+            </div>
 
-          <div>
-            <label class="star-mark" for="">вес (кг):</label>
-            <input class="form-field" type="number" value="7"> <br>
-          </div>
+            <div>
+              <label class="star-mark" for="">вес (кг):</label>
+              <input class="form-field" type="number" value="7"> <br>
+            </div>
 
-          <div>
-            <label for="">возраст (лет):</label>
-            <input class="form-field" type="number" value="7"> <br>
-          </div>
+            <div>
+              <label for="">возраст (лет):</label>
+              <input class="form-field" type="number" value="7"> <br>
+            </div>
+          </fieldset>
 
           <fieldset class="program-selection__weight">
             <legend class="visually-hidden">выбор веса</legend>
@@ -280,7 +281,7 @@
       </div>
     </div>
   </footer>
-  <!-- <script src="./js/toggle.js"></script> -->
+  <script src="./js/toggle.js"></script>
 </body>
 
 </html>

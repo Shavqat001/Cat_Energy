@@ -1,3 +1,7 @@
+.black-text {
+  color: #000;
+}
+
 .input-field() {
   border: 1px solid #E7E7E7;
   text-transform: uppercase;
@@ -13,6 +17,22 @@
 
   @media (min-width: @tablet-width) {
     margin-left: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+  }
+}
+
+.margin-right() {
+  margin-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 110px;
   }
 }
 
@@ -39,6 +59,13 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 57px;
+    margin-left: 35px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 40px;
+    margin-left: 70px;
   }
 }
 
@@ -95,22 +122,28 @@
     }
   }
 
-  &__form>div {
-    display: flex;
-    align-items: center;
+  &__filling-form {
+    border: none;
+    padding: 0;
     .margin-left();
-    margin-right: 20px;
+    .margin-right();
 
-    @media (min-width: @tablet-width) {
-      margin-right: 67px;
+    @media (min-width: @desktop-width) {
+      width: 569px;
+      display: inline;
     }
   }
 
-  &__form>div:not(:last-child) {
+  &__filling-form div {
+    display: flex;
+    align-items: center;
+  }
+
+  &__filling-form div:not(:last-child) {
     margin-bottom: 13px;
   }
 
-  &__form div label {
+  &__filling-form div label {
     font-size: 16px;
     line-height: 18px;
     font-weight: 400;
@@ -143,6 +176,11 @@
     padding: 0;
     padding-top: 22px;
     padding-bottom: 19px;
+
+    @media (min-width: @desktop-width) {
+      width: 568px;
+      display: inline;
+    }
   }
 
   &__weight div label {
@@ -197,11 +235,6 @@
 
   &__contact legend {
     .legend();
-
-    @media (min-width: @tablet-width) {
-      margin-left: 35px;
-      padding-left: 30px;
-    }
   }
 
   &__contact legend br {
@@ -214,11 +247,7 @@
     display: flex;
     align-items: center;
     .margin-left();
-    margin-right: 20px;
-
-    @media (min-width: @tablet-width) {
-      margin-right: 67px;
-    }
+    .margin-right();
   }
 
   &__contact div:not(:last-child) {
@@ -242,20 +271,11 @@
 
   &__comment legend {
     .legend();
-
-    @media (min-width: @tablet-width) {
-      margin-left: 35px;
-      padding-left: 30px;
-    }
   }
 
   &__comment div {
     display: flex;
-    margin-right: 20px;
-
-    @media (min-width: @tablet-width) {
-      margin-right: 67px;
-    }
+    .margin-right();
   }
 
   &__comment div textarea {
@@ -285,11 +305,6 @@
 
   &__additionally legend {
     .legend();
-
-    @media (min-width: @tablet-width) {
-      margin-left: 35px;
-      padding-left: 30px;
-    }
   }
 
   &__additionally div {
@@ -379,6 +394,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    .margin-left();
 
     @media (min-width: @tablet-width) {
       flex-direction: row;
