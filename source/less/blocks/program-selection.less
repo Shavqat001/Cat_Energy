@@ -140,6 +140,10 @@
     display: flex;
     flex-direction: column;
 
+    @media (min-width: @tablet-width) {
+      margin-bottom: 72px;
+    }
+
     @media (min-width: @desktop-width) {
       display: inline-flex;
       margin-bottom: 69px;
@@ -205,6 +209,12 @@
     padding-bottom: 19px;
     flex-grow: 1;
 
+    @media (min-width: @tablet-width) {
+      border: 1px solid #d9d9d9;
+      .margin-left();
+      .margin-right();
+    }
+
     @media (min-width: @desktop-width) {
       width: 568px;
       height: 200px;
@@ -230,6 +240,10 @@
     display: flex;
     align-items: center;
     .margin-left();
+
+    @media (min-width: @tablet-width) {
+      margin-left: 25px;
+    }
 
     @media (min-width: @desktop-width) {
       padding: 0;
@@ -302,6 +316,16 @@
     .margin-left();
     .margin-right();
     flex-grow: 1;
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
+    }
+  }
+
+  &__contact div:first-of-type {
+    @media (min-width: @desktop-width) {
+      .margin-left();
+    }
   }
 
   &__contact div:not(:last-child) {
@@ -309,6 +333,16 @@
 
     @media (min-width: @tablet-width) {
       margin-bottom: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 78px;
+    }
+  }
+
+  &__contact div:last-of-type {
+    @media (min-width: @desktop-width) {
+      .margin-right();
     }
   }
 
