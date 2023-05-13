@@ -1,3 +1,7 @@
+.catalog-title {
+  margin-bottom: 164px;
+}
+
 .products {
 
   &__list {
@@ -12,7 +16,6 @@
     }
 
     @media (min-width: @desktop-width) {
-      display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -25,9 +28,9 @@
     padding-bottom: 25px;
 
     @media (min-width: @tablet-width) {
-      height: 430px;
       border: none;
       margin-bottom: 140px;
+      padding: 0;
     }
   }
 
@@ -40,6 +43,7 @@
 
     @media (min-width: @tablet-width) {
       width: 324px;
+      height: 430px;
       background-color: @basic-grey;
       display: flex;
       flex-direction: column;
@@ -87,6 +91,11 @@
   &__description-list div {
     display: flex;
     justify-content: space-between;
+
+    @media (min-width: @tablet-width) {
+      border-bottom: 1px solid @special-grey-2;
+      padding-bottom: 9px;
+    }
   }
 
   &__description-name,
@@ -111,6 +120,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: @tablet-width) {
+      min-height: 39px;
+    }
   }
 }
 
@@ -121,6 +134,12 @@
     display: flex;
     flex-direction: column;
     align-content: space-between;
+
+    @media (min-width: @tablet-width) {
+      width: 324px;
+      border: 2px solid #F2F2F2;
+
+    }
   }
 
   .add {
@@ -131,6 +150,21 @@
     padding: 0;
     margin: 0 auto;
     margin-bottom: 24px;
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      height: 60px;
+      margin-top: 52px;
+      margin-bottom: 49px;
+    }
+
+  }
+
+  .add svg {
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   & b {
@@ -140,6 +174,20 @@
     color: #111;
     font-weight: 400;
     margin-bottom: 10px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 22px;
+      margin-bottom: 23px;
+    }
+  }
+
+  & b br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
   }
 
   & p {
@@ -150,6 +198,19 @@
     font-weight: 400;
     margin: 0;
     margin-bottom: 27px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 87px;
+      font-size: 16px;
+    }
+  }
+
+  & p br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
   }
 }
 
@@ -161,4 +222,8 @@
   font-size: 16px;
   line-height: 20px;
   padding: 10px 0 10px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 38px 38px;
+  }
 }
